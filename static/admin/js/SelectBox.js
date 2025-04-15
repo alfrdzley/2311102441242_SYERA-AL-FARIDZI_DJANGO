@@ -11,7 +11,7 @@
             }
         },
         redisplay: function(id) {
-            // Repopulate HTML select box from cache
+            // Repopulate dashboard select box from cache
             const box = document.getElementById(id);
             const scroll_value_from_top = box.scrollTop;
             box.innerHTML = '';
@@ -26,7 +26,7 @@
             box.scrollTop = scroll_value_from_top;
         },
         filter: function(id, text) {
-            // Redisplay the HTML select box, displaying only the choices containing ALL
+            // Redisplay the dashboard select box, displaying only the choices containing ALL
             // the words in text. (It's an AND search.)
             const tokens = text.toLowerCase().split(/\s+/);
             for (const node of SelectBox.cache[id]) {

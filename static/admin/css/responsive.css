@@ -175,7 +175,7 @@ input[type="submit"], button {
     }
 
     /*
-    Minifiers remove the default (text) "type" attribute from "input" HTML
+    Minifiers remove the default (text) "type" attribute from "input" dashboard
     tags. Add input:not([type]) to make the CSS stylesheet work the same.
     */
     .form-row input:not([type]),
