@@ -10,6 +10,7 @@ Website ini merupakan portfolio pribadi saya yang berisi tentang informasi diri 
 - **About Page**: yang akan menampilkan tentang saya
 - **Tools Page**: yang akan menampilkan tool yang saya gunakan sehari hari untuk development
 - **Contact Page**: yang akan menampilkan form yang bisa digunakan untuk menghubungi saya
+- **Dashboard Page**: yang akan menampikan menampilkan data dan informasi penting secara visual, sehingga memudahkan untuk memantau, menganalisis, dan mengambil keputusan
 
 ## Prerequisites
 
