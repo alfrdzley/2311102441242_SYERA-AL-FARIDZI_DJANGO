@@ -74,11 +74,11 @@ var support = {};
 var isFunction = function isFunction( obj ) {
 
 		// Support: Chrome <=57, Firefox <=52
-		// In some browsers, typeof returns "function" for HTML <object> elements
+		// In some browsers, typeof returns "function" for dashboard <object> elements
 		// (i.e., `typeof document.createElement( "object" ) === "function"`).
 		// We don't want to classify *any* DOM node as a function.
 		// Support: QtWeb <=3.8.5, WebKit <=534.34, wkhtmltopdf tool <=0.12.5
-		// Plus for old WebKit, typeof returns "function" for HTML collections
+		// Plus for old WebKit, typeof returns "function" for dashboard collections
 		// (e.g., `typeof document.getElementsByTagName("div") === "function"`). (gh-4756)
 		return typeof obj === "function" && typeof obj.nodeType !== "number" &&
 			typeof obj.item !== "function";
@@ -453,9 +453,9 @@ jQuery.extend( {
 		var namespace = elem && elem.namespaceURI,
 			docElem = elem && ( elem.ownerDocument || elem ).documentElement;
 
-		// Assume HTML when documentElement doesn't yet exist, such as inside
+		// Assume dashboard when documentElement doesn't yet exist, such as inside
 		// document fragments.
-		return !rhtmlSuffix.test( namespace || docElem && docElem.nodeName || "HTML" );
+		return !rhtmlSuffix.test( namespace || docElem && docElem.nodeName || "dashboard" );
 	},
 
 	// Support: Android <=4.0 only, PhantomJS 1 only
@@ -818,7 +818,7 @@ function find( selector, context, results, seed ) {
 		return results;
 	}
 
-	// Try to shortcut find operations (as opposed to filters) in HTML documents
+	// Try to shortcut find operations (as opposed to filters) in dashboard documents
 	if ( !seed ) {
 		setDocument( context );
 		context = context || document;
@@ -2851,9 +2851,9 @@ jQuery.fn.extend( {
 // A central reference to the root jQuery(document)
 var rootjQuery,
 
-	// A simple way to check for HTML strings
+	// A simple way to check for dashboard strings
 	// Prioritize #id over <tag> to avoid XSS via location.hash (trac-9521)
-	// Strict HTML recognition (trac-11290: must start with <)
+	// Strict dashboard recognition (trac-11290: must start with <)
 	// Shortcut simple #id case for speed
 	rquickExpr = /^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]+))$/,
 
@@ -2869,13 +2869,13 @@ var rootjQuery,
 		// so migrate can support jQuery.sub (gh-2101)
 		root = root || rootjQuery;
 
-		// Handle HTML strings
+		// Handle dashboard strings
 		if ( typeof selector === "string" ) {
 			if ( selector[ 0 ] === "<" &&
 				selector[ selector.length - 1 ] === ">" &&
 				selector.length >= 3 ) {
 
-				// Assume that strings that start and end with <> are HTML and skip the regex check
+				// Assume that strings that start and end with <> are dashboard and skip the regex check
 				match = [ null, selector, null ];
 
 			} else {
@@ -5945,7 +5945,7 @@ function domManip( collection, args, callback, ignored ) {
 
 							// Unwrap a CDATA section containing script contents. This shouldn't be
 							// needed as in XML documents they're already not visible when
-							// inspecting element contents and in HTML documents they have no
+							// inspecting element contents and in dashboard documents they have no
 							// meaning but we're preserving that logic for backwards compatibility.
 							// This will be removed completely in 4.0. See gh-4904.
 							DOMEval( node.textContent.replace( rcleanScript, "" ), node, doc );
@@ -7946,7 +7946,7 @@ jQuery.extend( {
 		var name,
 			i = 0,
 
-			// Attribute names can contain non-HTML whitespace characters
+			// Attribute names can contain non-dashboard whitespace characters
 			// https://html.spec.whatwg.org/multipage/syntax.html#attributes-2
 			attrNames = value && value.match( rnothtmlwhite );
 
@@ -8131,7 +8131,7 @@ jQuery.each( [
 
 
 
-	// Strip and collapse whitespace according to HTML spec
+	// Strip and collapse whitespace according to dashboard spec
 	// https://infra.spec.whatwg.org/#strip-and-collapse-ascii-whitespace
 	function stripAndCollapse( value ) {
 		var tokens = value.match( rnothtmlwhite ) || [];

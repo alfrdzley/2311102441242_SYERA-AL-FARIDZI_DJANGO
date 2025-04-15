@@ -60,7 +60,7 @@
             return el.checked;
         }).length;
         const counter = document.querySelector(options.counterContainer);
-        // data-actions-icnt is defined in the generated HTML
+        // data-actions-icnt is defined in the generated dashboard
         // and contains the total amount of objects in the queryset
         const actions_icnt = Number(counter.dataset.actionsIcnt);
         counter.textContent = interpolate(
