@@ -9,3 +9,7 @@ def dashboard(request):
         'title': 'Dashboard',
     }
     return render(request, templates_name, context)
+
+
+def projects(request):
+    return None
