@@ -22,5 +22,8 @@ from porfolio.views import home
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
+    path('about/', include('about.urls')),
+    path('projects/', include('projects.urls')),
+    path('contact/', include('contact.urls')),
     path('dashboard/', include('blog.urls')),
 ]

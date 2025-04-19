@@ -1,7 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!-- META -->
     <meta charset="utf-8">
@@ -11,7 +10,7 @@
     <meta name="keywords" content="personal, portfolio new, html, one page, bootstrap, new html template, design, creative, onepage, clean, modern">
     <meta name="author" content="Tanvir Hossain">
     <!-- PAGE TITLE -->
-    <title>HomePage - Syera Al-Faridzi</title>
+    <title>Projects - Syera Al-Faridzi</title>
     <!-- FAVICON ICON -->
     <link rel="shortcut icon" href="{% static 'envato/assets/images/favicon.png' %}" type="image/x-icon" />
     <!-- ALL GOOGLE FONTS -->
@@ -79,7 +78,7 @@
                     <!-- START LOGO DESIGN AREA -->
                     <div class="logo-outer">
                         <div class="logo">
-                            <a href="index.html"><img src="{% static 'envato/assets/images/logos/logo.png' %}" alt="Logo" title="Logo" /></a>
+                            <a href="/"><img src="{% static 'envato/assets/images/logos/logo.png' %}" alt="Logo" title="Logo" /></a>
                         </div>
                     </div>
                     <!-- / END LOGO DESIGN AREA -->
@@ -89,7 +88,7 @@
                         <nav class="main-menu navbar-expand-lg">
                             <div class="navbar-header">
                                 <div class="mobile-logo">
-                                    <a href="index.html">
+                                    <a href="/">
                                         <img src="{% static 'envato/assets/images/logos/logo.png' %}" alt="Logo" title="Logo" />
                                     </a>
                                 </div>
@@ -103,10 +102,10 @@
                             <div class="navbar-collapse collapse">
                                 <ul class="navigation clearfix">
                                     <li><a class="nav-link-click" href="/">Home</a></li>
-                                    <li><a class="nav-link-click" href="/about">about</a></li>
-                                    <li><a class="nav-link-click" href="/project">Projects</a></li>
-                                    <li><a class="nav-link-click" href="/blog">blog</a></li>
-                                    <li><a class="nav-link-click" href="/contact">Contact</a></li>
+                                    <li><a class="nav-link-click" href="/about">About</a></li>
+                                    <li><a class="nav-link-click" href="/projects/">Projects</a></li>
+                                    <li><a class="nav-link-click" href="/blog/">blog</a></li>
+                                    <li><a class="nav-link-click" href="/contact/">Contact</a></li>
                                 </ul>
                             </div>
                         </nav>
@@ -128,149 +127,94 @@
         <div id="smooth-content">
             <main class="main-bg o-hidden">
                 <!-- START HEADER DESIGN AREA -->
-                <section id="home" class="main-hero-area">
+                <section class="single-page-hero-area">
                     <div class="container">
                         <div class="row align-items-center">
-                            <div class="col-lg-4">
-                                <div class="glitch">
-                                    <img src="{% static 'envato/assets/images/about/me.jpg' %}" alt="About Me" />
-                                    <div class="glitch__layers">
-                                        <div class="glitch__layer"></div>
-                                        <div class="glitch__layer"></div>
-                                        <div class="glitch__layer"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <!-- START HERO DESIGN AREA -->
-                                <div class="hero-content wow fadeInUp delay-0-2s">
-                                    <h1>I am product designer, indie maker, and digital nomad living in internet.</h1>
-                                    <h2>Hi, i'm Stefeny i'm a freelance product designer with 12+ years of experience focusing on app interfaces. </h2>
-                                    <div class="hero-btns">
-                                        <a href="/contact" class="theme-btn">Download CV <i class="ri-download-line"></i></a>
-                                    </div>
-                                </div>
-                                <!-- / END HERO DESIGN AREA -->
+                            <div class="col-lg-12">
+                                <h2>A Branch with Flowers</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit utsadi sfejdis aliquam, purus sit amet luctus venenatis, lectus magna sansit trandis fringilla urna, porttitor rhoncus dolor purus non enim dollors praesent tabasi elementum facilisis leo.</p>
                             </div>
                         </div>
                     </div>
                 </section>
                 <!-- / END HEADER DESIGN AREA -->
-                <!-- START PORTFOLIO DESIGN AREA -->
-                <div class="projects-area" id="portfolio">
-                    <div class="custom-icon">
-                        <img src="{% static 'envato/assets/images/custom/work-scribble.svg' %}" alt="custom">
+                <!-- START SINGLE PAGE DETAILS DESIGN AREA -->
+                <div class="single-project-page-design">
+                    <div class="single-project-image">
+                        <img src="{% static 'envato/assets/images/projects/work2.jpg' %}" alt="image">
                     </div>
-                    <div class="container-fluid">
-                        <div class="row g-4 portfolio-grid">
-                            <!-- START SINGLE PORTFOLIO DESIGN AREA -->
-                            <div class="col-md-6 col-xl-6 portfolio-item category-1">
-                                <a href="{% static 'envato/assets/images/projects/work1.jpg' %}" class="work-popup">
-                                    <div class="portfolio-box">
-                                        <!-- Image -->
-                                        <img src="{% static 'envato/assets/images/projects/work1.jpg' %}" alt="" data-rjs="2">
-                                        <!-- Category -->
-                                        <span class="portfolio-category">Branding</span>
-                                        <!-- Caption -->
-                                        <div class="portfolio-caption">
-                                            <h1>Glasses of Cocktail</h1>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- // END SINGLE PORTFOLIO DESIGN AREA -->
-                            <!-- START SINGLE PORTFOLIO DESIGN AREA -->
-                            <div class="col-md-6 col-xl-6 portfolio-item category-2">
-                                <a href="single-project.html">
-                                    <div class="portfolio-box">
-                                        <!-- Image -->
-                                        <img src="{% static 'envato/assets/images/projects/work2.jpg' %}" alt="" data-rjs="2">
-                                        <!-- Category -->
-                                        <span class="portfolio-category">Mockup</span>
-                                        <!-- Caption -->
-                                        <div class="portfolio-caption">
-                                            <h1>A Branch with Flowers</h1>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- // END SINGLE PORTFOLIO DESIGN AREA -->
-                            <!-- START SINGLE PORTFOLIO DESIGN AREA -->
-                            <div class="col-md-6 col-xl-4 portfolio-item category-2">
-                                <a href="https://www.youtube.com/watch?v=qZEPs3vmYB4" class="popup-youtube">
-                                    <div class="portfolio-box">
-                                        <!-- Image -->
-                                        <img src="{% static 'envato/assets/images/projects/work3.jpg' %}" alt="" data-rjs="2">
-                                        <!-- Category -->
-                                        <span class="portfolio-category">Video</span>
-                                        <!-- Caption -->
-                                        <div class="portfolio-caption">
-                                            <h1>Orange Rose Flower</h1>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- // END SINGLE PORTFOLIO DESIGN AREA -->
-                            <!-- START SINGLE PORTFOLIO DESIGN AREA -->
-                            <div class="col-md-6 col-xl-4 portfolio-item category-1">
-                                <a href="{% static 'envato/assets/images/projects/work4.jpg' %}" class="work-popup">
-                                    <div class="portfolio-box">
-                                        <!-- Image -->
-                                        <img src="{% static 'envato/assets/images/projects/work4.jpg' %}" alt="" data-rjs="2">
-                                        <!-- Category -->
-                                        <span class="portfolio-category">Branding</span>
-                                        <!-- Caption -->
-                                        <div class="portfolio-caption">
-                                            <h1>Green Plant on a Desk</h1>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- // END SINGLE PORTFOLIO DESIGN AREA -->
-                            <!-- START SINGLE PORTFOLIO DESIGN AREA -->
-                            <div class="col-md-6 col-xl-4 portfolio-item category-2">
-                                <a href="{% static 'envato/assets/images/projects/work5.jpg' %}" class="work-popup">
-                                    <div class="portfolio-box">
-                                        <!-- Image -->
-                                        <img src="{% static 'envato/assets/images/projects/work5.jpg' %}" alt="" data-rjs="2">
-                                        <!-- Category -->
-                                        <span class="portfolio-category">Mockup</span>
-                                        <!-- Caption -->
-                                        <div class="portfolio-caption">
-                                            <h1>Orange Rose Flower</h1>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- // END SINGLE PORTFOLIO DESIGN AREA -->
-                        </div>
-                    </div>
-                </div>
-                <!-- // END PORTFOLIO DESIGN AREA -->
-                <!-- START COMPANY DESIGN AREA -->
-                <div class="company-design-area">
-                    <div class="container">
+                    <div class="container pt-60 pb-40">
                         <div class="row">
-                            <div class="col-lg-12">
-                                <h2>Company I Worked With</h2>
-                                <div class="company-list">
-                                    <div class="scroller" data-direction="left" data-speed="slow">
-                                        <div class="scroller__inner">
-                                            <img src="{% static 'envato/assets/images/client-logos/partner1.png' %}" alt="" />
-                                            <img src="{% static 'envato/assets/images/client-logos/partner2.png' %}" alt="" />
-                                            <img src="{% static 'envato/assets/images/client-logos/partner3.png' %}" alt="" />
-                                            <img src="{% static 'envato/assets/images/client-logos/partner4.png' %}" alt="" />
-                                            <img src="{% static 'envato/assets/images/client-logos/partner5.png' %}" alt="" />
-                                            <img src="{% static 'envato/assets/images/client-logos/partner1.png' %}" alt="" />
-                                        </div>
+                            <div class="col-lg-4">
+                                <!-- START SINGLE LEFT DESIGN AREA -->
+                                <div class="single-project-page-left wow fadeInUp delay-0-2s">
+                                    <div class="single-info">
+                                        <p>Year</p>
+                                        <h3>2024</h3>
+                                    </div>
+                                    <div class="single-info">
+                                        <p>Client</p>
+                                        <h3>Bento Studio</h3>
+                                    </div>
+                                    <div class="single-info">
+                                        <p>Services</p>
+                                        <h3>Web Design</h3>
+                                    </div>
+                                    <div class="single-info">
+                                        <p>Project</p>
+                                        <h3>Creative</h3>
                                     </div>
                                 </div>
+                                <!-- / END SINGLE LEFT DESIGN AREA -->
+                            </div>
+                            <!-- START SINGLE RIGHT DESIGN AREA -->
+                            <div class="col-lg-8">
+                                <div class="single-project-page-right wow fadeInUp delay-0-4s">
+                                    <h2>
+                                        Description
+                                    </h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit utsadi sfejdis aliquam, purus sit amet luctus venenatis, lectus magna sansit trandis fringilla urna, porttitor rhoncus dolor purus non enim dollors praesent tabasi elementum facilisis leo.</p>
+                                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable sourc consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
+                                </div>
+                            </div>
+                            <!-- / END SINGLE RIGHT DESIGN AREA -->
+                        </div>
+                        <!-- START SINGLE PAGE GALLERY DESIGN AREA -->
+                        <div class="row pt-60">
+                            <div class="col-lg-6">
+                                <a href="{% static 'envato/assets/images/projects/single-project1.jpg' %}" class="work-popup">
+                                <div class="single-image wow fadeInUp delay-0-2s">
+                                    <img src="{% static 'envato/assets/images/projects/single-project1.jpg' %}" alt="gallery">
+                                </div>
+                                </a>
+                            </div>
+                            <div class="col-lg-6">
+                                <a href="{% static 'envato/assets/images/projects/single-project2.jpg' %}" class="work-popup">
+                                <div class="single-image wow fadeInUp delay-0-4s">
+                                    <img src="{% static 'envato/assets/images/projects/single-project2.jpg' %}" alt="gallery">
+                                </div>
+                                 </a>
+                            </div>
+                            <div class="col-lg-6">
+                                <a href="{% static 'envato/assets/images/projects/single-project3.jpg' %}" class="work-popup">
+                                <div class="single-image wow fadeInUp delay-0-6s">
+                                    <img src="{% static 'envato/assets/images/projects/single-project3.jpg' %}" alt="gallery">
+                                </div>
+                                 </a>
+                            </div>
+                            <div class="col-lg-6">
+                                <a href="{% static 'envato/assets/images/projects/single-project4.jpg' %}" class="work-popup">
+                                <div class="single-image wow fadeInUp delay-0-8s">
+                                    <img src="{% static 'envato/assets/images/projects/single-project4.jpg' %}" alt="gallery">
+                                </div>
+                                 </a>
                             </div>
                         </div>
+                        <!--  / END SINGLE PAGE GALLERY DESIGN AREA -->
                     </div>
                 </div>
-                <!-- // END COMPANY DESIGN AREA -->
-                <!-- START CALL TO ACTION DESIGN AREA -->
+                <!-- / END SINGLE PAGE DETAILS DESIGN AREA -->
+{#                <!-- START CALL TO ACTION DESIGN AREA -->#}
 {#                <section class="call-to-action-area">#}
 {#                    <div class="container">#}
 {#                        <div class="row">#}
@@ -280,7 +224,7 @@
 {#                                    <h2>Are You Ready to kickstart your project?</h2>#}
 {#                                    <p>Reach out and let's make it happen ✨. I'm also available for full-time or Part-time opportunities to push the boundaries of design and deliver exceptional work.</p>#}
 {#                                    <div class="hero-btns">#}
-{#                                        <a href="contact.html" class="theme-btn call-to-action-button">Let's Talk <i class="ri-download-line"></i></a>#}
+{#                                        <a href="/contact/" class="theme-btn call-to-action-button">Let's Talk <i class="ri-download-line"></i></a>#}
 {#                                    </div>#}
 {#                                </div>#}
 {#                            </div>#}
@@ -288,7 +232,7 @@
 {#                        </div>#}
 {#                    </div>#}
 {#                </section>#}
-                <!--  // END CALL TO ACTION DESIGN AREA -->
+{#                <!--  // END CALL TO ACTION DESIGN AREA -->#}
                 <!-- START FOOTER DESIGN AREA -->
                 <footer class="main-footer">
                     <div class="footer-bottom pt-50 pb-40">
@@ -297,7 +241,7 @@
                                 <div class="col-lg-12 text-center">
                                     <div class="copyright-text">
                                         <p>
-                                            &copy;Copyright <a href="index.html">Wize</a> All
+                                            &copy;Copyright <a href="/">Wize</a> All
                                             Rights Reserved.
                                         </p>
                                     </div>
