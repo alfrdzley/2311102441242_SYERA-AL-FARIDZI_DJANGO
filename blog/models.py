@@ -1,11 +1,10 @@
 from django.db import models
 
+
 class Post(models.Model):
-    id = models.BigAutoField(primary_key=True)
+    objects = None
     title = models.CharField(max_length=200)
-    content = models.TextField()
-    publication_at = models.DateTimeField()
-    author = models.CharField(max_length=100)
-    status = models.CharField(max_length=20)
+    subtitle = models.CharField(max_length=600)
+    description = models.TextField()
+    image = models.ImageField(upload_to='images/')
     created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)

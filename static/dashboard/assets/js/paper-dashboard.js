@@ -44,7 +44,7 @@ function debounce(func, wait, immediate) {
     }, wait);
     if (immediate && !timeout) func.apply(context, args);
   };
-};
+}
 
 (function() {
   isWindows = navigator.platform.indexOf('Win') > -1 ? true : false;

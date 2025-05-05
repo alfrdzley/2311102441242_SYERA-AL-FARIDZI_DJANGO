@@ -16,7 +16,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
 from porfolio.views import home
 
 urlpatterns = [
@@ -25,5 +24,6 @@ urlpatterns = [
     path('about/', include('about.urls')),
     path('projects/', include('projects.urls')),
     path('contact/', include('contact.urls')),
-    path('dashboard/', include('blog.urls')),
+    # path('dashboard/', include('blog.urls')),
+    path('blog/', include('blog.urls')),
 ]

@@ -78,7 +78,7 @@ paper-dashboard-2-pro
 │   ├── img/
 │   ├── js/
 │   │   ├── core/
-│   │   │   ├── bootstrap.min.js
+│   │   │   ├── bootstrap.min.js.map
 │   │   │   ├── jquery.min.js
 │   │   │   └── popper.min.js
 │   │   ├── paper-dashboard.js
