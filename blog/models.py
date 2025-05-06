@@ -1,11 +1,26 @@
 from django.db import models
+from django.utils.text import slugify
+
 
 class Post(models.Model):
-    id = models.BigAutoField(primary_key=True)
+    objects = None
     title = models.CharField(max_length=200)
-    content = models.TextField()
-    publication_at = models.DateTimeField()
-    author = models.CharField(max_length=100)
-    status = models.CharField(max_length=20)
+    subtitle = models.CharField(max_length=600)
+    description = models.TextField()
+    image = models.ImageField(upload_to='images/')
     created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    slug = models.SlugField(max_length=255, unique=True, blank=True, null=True)
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+            counter = 1
+            original_slug = self.slug
+            while Post.objects.filter(slug=self.slug).exists():
+                self.slug = f"{original_slug}-{counter}"
+                counter += 1
+        super().save(*args, **kwargs)
+
+
+    def __str__(self):
+        return self.title
