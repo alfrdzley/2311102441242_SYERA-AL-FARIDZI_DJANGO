@@ -1,6 +1,10 @@
-{% extends 'homepage/base.html' %}
 {% load static %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+{% block head %}
+{% endblock %}
+
 <body>
 <!-- START PRELOADER AREA-->
 <div class="preloader">
@@ -29,8 +33,10 @@
 </div>
 <!-- / END MAGIC CURSOR AND BALL AREA-->
 <!-- START MENU DESIGN AREA -->
-
+{% include 'homepage/header.html' %}
 <!-- / END MENU DESIGN AREA -->
+
+
 <!-- START MENU DESIGN AREA -->
 <div id="smooth-wrapper">
     <div id="smooth-content">
@@ -78,7 +84,8 @@
                             <a href="{% static 'envato/assets/images/projects/work1.jpg' %}" class="work-popup">
                                 <div class="portfolio-box">
                                     <!-- Image -->
-                                    <img src="{% static 'envato/assets/images/projects/work1.jpg' %}" alt="" data-rjs="2">
+                                    <img src="{% static 'envato/assets/images/projects/work1.jpg' %}" alt=""
+                                         data-rjs="2">
                                     <!-- Category -->
                                     <span class="portfolio-category">Branding</span>
                                     <!-- Caption -->
@@ -94,7 +101,8 @@
                             <a href="single-project.html">
                                 <div class="portfolio-box">
                                     <!-- Image -->
-                                    <img src="{% static 'envato/assets/images/projects/work2.jpg' %}" alt="" data-rjs="2">
+                                    <img src="{% static 'envato/assets/images/projects/work2.jpg' %}" alt=""
+                                         data-rjs="2">
                                     <!-- Category -->
                                     <span class="portfolio-category">Mockup</span>
                                     <!-- Caption -->
@@ -110,7 +118,8 @@
                             <a href="https://www.youtube.com/watch?v=qZEPs3vmYB4" class="popup-youtube">
                                 <div class="portfolio-box">
                                     <!-- Image -->
-                                    <img src="{% static 'envato/assets/images/projects/work3.jpg' %}" alt="" data-rjs="2">
+                                    <img src="{% static 'envato/assets/images/projects/work3.jpg' %}" alt=""
+                                         data-rjs="2">
                                     <!-- Category -->
                                     <span class="portfolio-category">Video</span>
                                     <!-- Caption -->
@@ -126,7 +135,8 @@
                             <a href="{% static 'envato/assets/images/projects/work4.jpg' %}" class="work-popup">
                                 <div class="portfolio-box">
                                     <!-- Image -->
-                                    <img src="{% static 'envato/assets/images/projects/work4.jpg' %}" alt="" data-rjs="2">
+                                    <img src="{% static 'envato/assets/images/projects/work4.jpg' %}" alt=""
+                                         data-rjs="2">
                                     <!-- Category -->
                                     <span class="portfolio-category">Branding</span>
                                     <!-- Caption -->
@@ -142,7 +152,8 @@
                             <a href="{% static 'envato/assets/images/projects/work5.jpg' %}" class="work-popup">
                                 <div class="portfolio-box">
                                     <!-- Image -->
-                                    <img src="{% static 'envato/assets/images/projects/work5.jpg' %}" alt="" data-rjs="2">
+                                    <img src="{% static 'envato/assets/images/projects/work5.jpg' %}" alt=""
+                                         data-rjs="2">
                                     <!-- Category -->
                                     <span class="portfolio-category">Mockup</span>
                                     <!-- Caption -->
@@ -166,12 +177,18 @@
                             <div class="company-list">
                                 <div class="scroller" data-direction="left" data-speed="slow">
                                     <div class="scroller__inner">
-                                        <img src="{% static 'envato/assets/images/client-logos/partner1.png' %}" alt=""/>
-                                        <img src="{% static 'envato/assets/images/client-logos/partner2.png' %}" alt=""/>
-                                        <img src="{% static 'envato/assets/images/client-logos/partner3.png' %}" alt=""/>
-                                        <img src="{% static 'envato/assets/images/client-logos/partner4.png' %}" alt=""/>
-                                        <img src="{% static 'envato/assets/images/client-logos/partner5.png' %}" alt=""/>
-                                        <img src="{% static 'envato/assets/images/client-logos/partner1.png' %}" alt=""/>
+                                        <img src="{% static 'envato/assets/images/client-logos/partner1.png' %}"
+                                             alt=""/>
+                                        <img src="{% static 'envato/assets/images/client-logos/partner2.png' %}"
+                                             alt=""/>
+                                        <img src="{% static 'envato/assets/images/client-logos/partner3.png' %}"
+                                             alt=""/>
+                                        <img src="{% static 'envato/assets/images/client-logos/partner4.png' %}"
+                                             alt=""/>
+                                        <img src="{% static 'envato/assets/images/client-logos/partner5.png' %}"
+                                             alt=""/>
+                                        <img src="{% static 'envato/assets/images/client-logos/partner1.png' %}"
+                                             alt=""/>
                                     </div>
                                 </div>
                             </div>
@@ -180,48 +197,16 @@
                 </div>
             </div>
             <!-- // END COMPANY DESIGN AREA -->
-            <!-- START CALL TO ACTION DESIGN AREA -->
-            <section class="call-to-action-area">
-                <div class="container">
-                    <div class="row">
-                        <!-- START ABOUT TEXT DESIGN AREA -->
-                        <div class="col-lg-12">
-                            <div class="call-to-action-part wow fadeInUp delay-0-2s text-center">
-                                <h2>Are You Ready to kickstart your project?</h2>
-                                <p>Reach out and let's make it happen ✨. I'm also available for full-time or Part-time
-                                    opportunities to push the boundaries of design and deliver exceptional work.</p>
-                                <div class="hero-btns">
-                                    <a href="contact.html" class="theme-btn call-to-action-button">Let's Talk <i
-                                            class="ri-download-line"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- / END ABOUT TEXT DESIGN AREA -->
-                    </div>
-                </div>
-            </section>
-            <!--  // END CALL TO ACTION DESIGN AREA -->
+
             <!-- START FOOTER DESIGN AREA -->
-            <footer class="main-footer">
-                <div class="footer-bottom pt-50 pb-40">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12 text-center">
-                                <div class="copyright-text">
-                                    <p>
-                                        &copy;Copyright <a href="index.html">Wize</a> All
-                                        Rights Reserved.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            {% include 'homepage/footer.html' %}
+            <!-- / END FOOTER DESIGN AREA -->
+
         </main>
     </div>
 </div>
 <!-- / END FOOTER DESIGN AREA -->
+
 <!-- START SCROOL UP DESIGN AREA -->
 <div class="progress-wrap cursor-pointer">
     <i class="ri-arrow-up-s-line"></i>
@@ -229,31 +214,9 @@
         <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
     </svg>
 </div>
+
 <!-- / END SCROOL UP DESIGN AREA -->
-<!-- JQUERY JS -->
-<script src="{% static 'envato/assets/js/jquery-3.6.0.min.js' %}"></script>
-<!-- BOOTSTRAP JS-->
-<script src="{% static 'envato/assets/js/bootstrap.min.js' %}"></script>
-<!-- APPEAR JS -->
-<script src="{% static 'envato/assets/js/appear.min.js' %}"></script>
-<!-- MAGNIFICANT JS -->
-<script src="{% static 'envato/assets/js/jquery.magnific-popup.min.js' %}"></script>
-<!-- SLICK JS-->
-<script src="{% static 'envato/assets/js/slick.min.js' %}"></script>
-<!-- GSAP AND LOCOMOTIV JS-->
-<script src="{% static 'envato/assets/js/gsap.min.js' %}"></script>
-<script src="{% static 'envato/assets/js/ScrollSmoother.min.js' %}"></script>
-<script src="{% static 'envato/assets/js/ScrollTrigger.min.js' %}"></script>
-<script src="{% static 'envato/assets/js/smoother-script.js' %}"></script>
-<!-- NICE SELECT JS-->
-<script src="{% static 'envato/assets/js/jquery.nice-select.min.js' %}"></script>
-<!-- IMAGE LOADER JS-->
-<script src="{% static 'envato/assets/js/imagesloaded.pkgd.min.js' %}"></script>
-<!-- ISOTOPE JS-->
-<script src="{% static 'envato/assets/js/isotope.pkgd.min.js' %}"></script>
-<!--  WOW ANIMATION JS-->
-<script src="{% static 'envato/assets/js/wow.min.js' %}"></script>
-<!-- SCRIPT JS-->
-<script src="{% static 'envato/assets/js/script.js' %}"></script>
-</body>
+{% block script %}
 {% endblock %}
+</body>
+</html>

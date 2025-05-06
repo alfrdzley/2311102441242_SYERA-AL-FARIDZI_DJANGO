@@ -11,7 +11,7 @@
           content="personal, portfolio new, html, one page, bootstrap, new html template, design, creative, onepage, clean, modern">
     <meta name="author" content="Tanvir Hossain">
     <!-- PAGE TITLE -->
-    <title>Blog - Syera Al-Faridzi</title>
+    <title>{{ project.title }} - Syera Al-Faridzi</title>
     <!-- FAVICON ICON -->
     <link rel="shortcut icon" href="{% static 'envato/assets/images/favicon.png' %}" type="image/x-icon"/>
     <!-- ALL GOOGLE FONTS -->
@@ -37,12 +37,6 @@
     <link rel="stylesheet" href="{% static 'envato/assets/css/style.css' %}"/>
     <!-- RESPONSIVE CSS -->
     <link rel="stylesheet" href="{% static 'envato/assets/css/responsive.css' %}">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 
 <body>
@@ -80,7 +74,7 @@
                 <!-- START LOGO DESIGN AREA -->
                 <div class="logo-outer">
                     <div class="logo">
-                        <a href="index.html"><img src="assets/images/logos/logo.png" alt="Logo" title="Logo"/></a>
+                        <a href="/"><img src="{% static 'envato/assets/images/logos/logo.png' %}" alt="Logo" title="Logo"/></a>
                     </div>
                 </div>
                 <!-- / END LOGO DESIGN AREA -->
@@ -90,8 +84,8 @@
                     <nav class="main-menu navbar-expand-lg">
                         <div class="navbar-header">
                             <div class="mobile-logo">
-                                <a href="index.html">
-                                    <img src="assets/images/logos/logo.png" alt="Logo" title="Logo"/>
+                                <a href="/">
+                                    <img src="{% static 'envato/assets/images/logos/logo.png' %}" alt="Logo" title="Logo"/>
                                 </a>
                             </div>
                             <!-- Toggle Button -->
@@ -105,10 +99,10 @@
                         <div class="navbar-collapse collapse">
                             <ul class="navigation clearfix">
                                 <li><a class="nav-link-click" href="/">Home</a></li>
-                                <li><a class="nav-link-click" href="about/">about</a></li>
-                                <li><a class="nav-link-click" href="projects/">Projects</a></li>
-                                <li><a class="nav-link-click" href="blog/">blog</a></li>
-                                <li><a class="nav-link-click" href="contact/">Contact</a></li>
+                                <li><a class="nav-link-click" href="/about/">about</a></li>
+                                <li><a class="nav-link-click" href="/projects/">Projects</a></li>
+                                <li><a class="nav-link-click" href="/blog/">blog</a></li>
+                                <li><a class="nav-link-click" href="/contact/">Contact</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -136,88 +130,61 @@
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-lg-12">
-                            <h2>Blog</h2>
-                            <p>I write about design, productivity, tech and my creative process. Subscribe to my
-                                newsletter to stay in touch. I sync once a month with no spam and ads.</p>
+                            <h2>{{ project.title }}</h2>
+                            <p>{{ project.subtitle }}</p>
                         </div>
                     </div>
                 </div>
             </section>
             <!-- / END HEADER DESIGN AREA -->
-            <!-- START VLOG DESIGN AREA -->
-            <div class="blog-area" id="blog">
-                <div class="container">
+            <!-- START SINGLE PAGE DETAILS DESIGN AREA -->
+            <div class="single-project-page-design">
+                <div class="single-project-image">
+                    <img src="{{ project.image.url }}" alt="{{ project.title }}">
+                </div>
+                <div class="container pt-60 pb-40">
                     <div class="row">
-                        <div class="blog-list">
-                            <div class="col-lg-12">
-                                {% for post in initial_posts %}
-                                    <!-- START SINGLE VLOG DESIGN AREA -->
-                                    <div class="row blog-post-box align-items-center">
-                                        <div class="col-lg-6">
-                                            <div class="blog-post-img">
-                                                <a href="{% url 'blog_detail' post.slug %}">
-                                                    <img src="{{ post.image.url }}"
-                                                         alt="">
-                                                </a>
-                                                <div class="blog-post-category">
-                                                    <a href="#">Help</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="blog-post-caption">
-                                                <h3>{{ post.created_at }}</h3>
-                                                <h2><a class="link-decoration"
-                                                       href="{% url 'blog_detail' post.slug %}">{{ post.title }}</a>
-                                                </h2>
-                                                <a class="theme-btn" href="{% url 'blog_detail' post.slug %}">Read more
-                                                    <i
-                                                            class="ri-arrow-right-line"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    </div>
-                                {% endfor %}
-
-                            <div id="remaining-posts" style="display: none;">
-                                {% for post in remaining_posts %}
-                                    <!-- START SINGLE VLOG DESIGN AREA -->
-                                    <div class="row blog-post-box align-items-center">
-                                        <div class="col-lg-6">
-                                            <div class="blog-post-img">
-                                                <a href="{% url 'blog_detail' post.slug %}">
-                                                    <img src="{{ post.image.url }}"
-                                                         alt="{{ post.title }}">
-                                                </a>
-                                                <div class="blog-post-category">
-                                                    <a href="#">Help</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="blog-post-caption">
-                                                <h3>{{ post.created_at }}</h3>
-                                                <h2><a class="link-decoration"
-                                                       href="{% url 'blog_detail' post.id %}">{{ post.title }}</a></h2>
-                                                <a class="theme-btn" href="{% url 'blog_detail' post.id %}">Read more <i
-                                                        class="ri-arrow-right-line"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    </div>
-                                {% endfor %}
-                        </div>
-                        {% if has_more %}
-                            <div class="text-center mt-4">
-                                <button id="expand-button" class="theme-btn">Show More <i
-                                        class="ri-arrow-down-line"></i></button>
+                        <div class="col-lg-4">
+                            <!-- START SINGLE LEFT DESIGN AREA -->
+                            <div class="single-project-page-left wow fadeInUp delay-0-2s">
+                                <div class="single-info">
+                                    <p>Year</p>
+                                    <h3>{{ project.year }}</h3>
+                                </div>
+                                <div class="single-info">
+                                    <p>Client</p>
+                                    <h3>{{ project.client }}</h3>
+                                </div>
+                                <div class="single-info">
+                                    <p>Services</p>
+                                    <h3>{{ project.services }}</h3>
+                                </div>
+                                <div class="single-info">
+                                    <p>Project</p>
+                                    <h3>{{ project.project_type }}</h3>
+                                </div>
                             </div>
-                        {% endif %}
+                            <!-- / END SINGLE LEFT DESIGN AREA -->
+                        </div>
+                        <!-- START SINGLE RIGHT DESIGN AREA -->
+                        <div class="col-lg-8">
+                            <div class="single-project-page-right wow fadeInUp delay-0-4s">
+                                <h2>
+                                    Description
+                                </h2>
+                                <p>{{ project.description }}</p>
+                            </div>
+                        </div>
+                        <!-- / END SINGLE RIGHT DESIGN AREA -->
+                    </div>
+                    <div class="blog-detail-back mt-4">
+                        <a href="{% url 'projects' %}" class="theme-btn">Back to Projects <i class="ri-arrow-left-line"></i></a>
                     </div>
                 </div>
             </div>
+            <!-- / END SINGLE PAGE DETAILS DESIGN AREA -->
+        </main>
     </div>
-    </main>
 </div>
 <!-- / END FOOTER DESIGN AREA -->
 <!-- START SCROOL UP DESIGN AREA -->
@@ -253,25 +220,6 @@
 <script src="{% static 'envato/assets/js/wow.min.js' %}"></script>
 <!-- SCRIPT JS-->
 <script src="{% static 'envato/assets/js/script.js' %}"></script>
-
-<!-- Custom Script for Expand Button -->
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const expandButton = document.getElementById('expand-button');
-        const remainingPosts = document.getElementById('remaining-posts');
-
-        if (expandButton) {
-            expandButton.addEventListener('click', function () {
-                if (remainingPosts.style.display === 'none') {
-                    remainingPosts.style.display = 'block';
-                    expandButton.innerHTML = 'Show Less <i class="ri-arrow-up-line"></i>';
-                } else {
-                    remainingPosts.style.display = 'none';
-                    expandButton.innerHTML = 'Show More <i class="ri-arrow-down-line"></i>';
-                }
-            });
-        }
-    });</script>
 </body>
 
 </html>

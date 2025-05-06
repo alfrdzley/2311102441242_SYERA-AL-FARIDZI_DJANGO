@@ -131,89 +131,87 @@
                     <div class="container">
                         <div class="row align-items-center">
                             <div class="col-lg-12">
-                                <h2>A Branch with Flowers</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit utsadi sfejdis aliquam, purus sit amet luctus venenatis, lectus magna sansit trandis fringilla urna, porttitor rhoncus dolor purus non enim dollors praesent tabasi elementum facilisis leo.</p>
+                                <h2>Projects</h2>
+                                <p>Explore my portfolio of projects. From web design to development, these projects showcase my skills and creativity.</p>
                             </div>
                         </div>
                     </div>
                 </section>
                 <!-- / END HEADER DESIGN AREA -->
-                <!-- START SINGLE PAGE DETAILS DESIGN AREA -->
-                <div class="single-project-page-design">
-                    <div class="single-project-image">
-                        <img src="{% static 'envato/assets/images/projects/work2.jpg' %}" alt="image">
-                    </div>
-                    <div class="container pt-60 pb-40">
+                <!-- START PROJECTS DESIGN AREA -->
+                <div class="blog-area" id="projects">
+                    <div class="container">
                         <div class="row">
-                            <div class="col-lg-4">
-                                <!-- START SINGLE LEFT DESIGN AREA -->
-                                <div class="single-project-page-left wow fadeInUp delay-0-2s">
-                                    <div class="single-info">
-                                        <p>Year</p>
-                                        <h3>2024</h3>
-                                    </div>
-                                    <div class="single-info">
-                                        <p>Client</p>
-                                        <h3>Bento Studio</h3>
-                                    </div>
-                                    <div class="single-info">
-                                        <p>Services</p>
-                                        <h3>Web Design</h3>
-                                    </div>
-                                    <div class="single-info">
-                                        <p>Project</p>
-                                        <h3>Creative</h3>
+                            <div class="blog-list">
+                                <div class="col-lg-12">
+                                    {% for project in initial_projects %}
+                                        <!-- START SINGLE PROJECT DESIGN AREA -->
+                                        <div class="row blog-post-box align-items-center">
+                                            <div class="col-lg-6">
+                                                <div class="blog-post-img">
+                                                    <a href="{% url 'project_detail' project.slug %}">
+                                                        <img src="{{ project.image.url }}"
+                                                             alt="{{ project.title }}">
+                                                    </a>
+                                                    <div class="blog-post-category">
+                                                        <a href="#">{{ project.project_type }}</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="blog-post-caption">
+                                                    <h3>{{ project.year }}</h3>
+                                                    <h2><a class="link-decoration"
+                                                           href="{% url 'project_detail' project.slug %}">{{ project.title }}</a>
+                                                    </h2>
+                                                    <p>{{ project.subtitle }}</p>
+                                                    <a class="theme-btn" href="{% url 'project_detail' project.slug %}">View Project <i
+                                                            class="ri-arrow-right-line"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+
+                                    <div id="remaining-posts" style="display: none;">
+                                        {% for project in remaining_projects %}
+                                            <!-- START SINGLE PROJECT DESIGN AREA -->
+                                            <div class="row blog-post-box align-items-center">
+                                                <div class="col-lg-6">
+                                                    <div class="blog-post-img">
+                                                        <a href="{% url 'project_detail' project.slug %}">
+                                                            <img src="{{ project.image.url }}"
+                                                                 alt="{{ project.title }}">
+                                                        </a>
+                                                        <div class="blog-post-category">
+                                                            <a href="#">{{ project.project_type }}</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="blog-post-caption">
+                                                        <h3>{{ project.year }}</h3>
+                                                        <h2><a class="link-decoration"
+                                                               href="{% url 'project_detail' project.slug %}">{{ project.title }}</a></h2>
+                                                        <p>{{ project.subtitle }}</p>
+                                                        <a class="theme-btn" href="{% url 'project_detail' project.slug %}">View Project <i
+                                                                class="ri-arrow-right-line"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
                                     </div>
                                 </div>
-                                <!-- / END SINGLE LEFT DESIGN AREA -->
+                                {% if has_more %}
+                                    <div class="text-center mt-4">
+                                        <button id="expand-button" class="theme-btn">Show More <i
+                                                class="ri-arrow-down-line"></i></button>
+                                    </div>
+                                {% endif %}
                             </div>
-                            <!-- START SINGLE RIGHT DESIGN AREA -->
-                            <div class="col-lg-8">
-                                <div class="single-project-page-right wow fadeInUp delay-0-4s">
-                                    <h2>
-                                        Description
-                                    </h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit utsadi sfejdis aliquam, purus sit amet luctus venenatis, lectus magna sansit trandis fringilla urna, porttitor rhoncus dolor purus non enim dollors praesent tabasi elementum facilisis leo.</p>
-                                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable sourc consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
-                                </div>
-                            </div>
-                            <!-- / END SINGLE RIGHT DESIGN AREA -->
                         </div>
-                        <!-- START SINGLE PAGE GALLERY DESIGN AREA -->
-                        <div class="row pt-60">
-                            <div class="col-lg-6">
-                                <a href="{% static 'envato/assets/images/projects/single-project1.jpg' %}" class="work-popup">
-                                <div class="single-image wow fadeInUp delay-0-2s">
-                                    <img src="{% static 'envato/assets/images/projects/single-project1.jpg' %}" alt="gallery">
-                                </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-6">
-                                <a href="{% static 'envato/assets/images/projects/single-project2.jpg' %}" class="work-popup">
-                                <div class="single-image wow fadeInUp delay-0-4s">
-                                    <img src="{% static 'envato/assets/images/projects/single-project2.jpg' %}" alt="gallery">
-                                </div>
-                                 </a>
-                            </div>
-                            <div class="col-lg-6">
-                                <a href="{% static 'envato/assets/images/projects/single-project3.jpg' %}" class="work-popup">
-                                <div class="single-image wow fadeInUp delay-0-6s">
-                                    <img src="{% static 'envato/assets/images/projects/single-project3.jpg' %}" alt="gallery">
-                                </div>
-                                 </a>
-                            </div>
-                            <div class="col-lg-6">
-                                <a href="{% static 'envato/assets/images/projects/single-project4.jpg' %}" class="work-popup">
-                                <div class="single-image wow fadeInUp delay-0-8s">
-                                    <img src="{% static 'envato/assets/images/projects/single-project4.jpg' %}" alt="gallery">
-                                </div>
-                                 </a>
-                            </div>
-                        </div>
-                        <!--  / END SINGLE PAGE GALLERY DESIGN AREA -->
                     </div>
                 </div>
-                <!-- / END SINGLE PAGE DETAILS DESIGN AREA -->
+                <!-- / END PROJECTS DESIGN AREA -->
 {#                <!-- START CALL TO ACTION DESIGN AREA -->#}
 {#                <section class="call-to-action-area">#}
 {#                    <div class="container">#}
@@ -287,6 +285,26 @@
     <script src="{% static 'envato/assets/js/wow.min.js' %}"></script>
     <!-- SCRIPT JS-->
     <script src="{% static 'envato/assets/js/script.js' %}"></script>
+
+    <!-- Custom Script for Expand Button -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const expandButton = document.getElementById('expand-button');
+            const remainingPosts = document.getElementById('remaining-posts');
+
+            if (expandButton) {
+                expandButton.addEventListener('click', function () {
+                    if (remainingPosts.style.display === 'none') {
+                        remainingPosts.style.display = 'block';
+                        expandButton.innerHTML = 'Show Less <i class="ri-arrow-up-line"></i>';
+                    } else {
+                        remainingPosts.style.display = 'none';
+                        expandButton.innerHTML = 'Show More <i class="ri-arrow-down-line"></i>';
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

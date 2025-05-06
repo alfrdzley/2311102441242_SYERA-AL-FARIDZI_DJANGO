@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Post
 
 
@@ -12,19 +12,34 @@ def dashboard(request):
 
 def blog(request):
     blog_data = Post.objects.all()
+    has_more = blog_data.count() > 3
     templates_name = "blog/base.html"
     context = {
         'title': 'Blog',
         'posts': blog_data,
+        'has_more': has_more,
+        'initial_posts': blog_data[:3],
+        'remaining_posts': blog_data[3:] if has_more else [],
     }
     return render(request, templates_name, context)
 
 
-# def blog_detail(request):
-#     blog_data = Post.objects.all()
-#     templates_name = "blog/detail.html"
-#
-#     return render(request, 'blog/detail.html', {'post': post})
+def blog_detail(request, slug=None, post_id=None):
+    if slug:
+        try:
+            post = get_object_or_404(Post, slug=slug)
+        except:
+            # If slug field doesn't exist in the database, fall back to ID
+            post = get_object_or_404(Post, id=slug)
+    else:
+        post = get_object_or_404(Post, id=post_id)
+
+    templates_name = "blog/detail.html"
+    context = {
+        'title': post.title,
+        'post': post,
+    }
+    return render(request, templates_name, context)
 
 #
 # # Create
