@@ -1,8 +1,11 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 {% block head %}
+	
 {% endblock %}
+
 <body>
     <!-- START PRELOADER AREA-->
     <div class="preloader">
@@ -31,7 +34,7 @@
     </div>
     <!-- / END MAGIC CURSOR AND BALL AREA-->
     <!-- START MENU DESIGN AREA -->
-    {% include 'contact/header.html' %}
+    {% include 'homepage/header.html' %}
     <!-- / END MENU DESIGN AREA -->
     <!-- START MENU DESIGN AREA -->
     <div id="smooth-wrapper">
@@ -105,10 +108,12 @@
                     </div>
                 </section>
                 <!-- / END CONTACT DESIGN AREA -->
-                {% include 'contact/footer.html' %}
+                <!-- START FOOTER DESIGN AREA -->
+                {% include 'homepage/footer.html' %}
             </main>
         </div>
     </div>
+    <!-- / END FOOTER DESIGN AREA -->
     <!-- START SCROOL UP DESIGN AREA -->
     <div class="progress-wrap cursor-pointer">
         <i class="ri-arrow-up-s-line"></i>
@@ -117,7 +122,31 @@
         </svg>
     </div>
     <!-- / END SCROOL UP DESIGN AREA -->
-    {% block script %}
-    {% endblock %}
+    <!-- JQUERY JS -->
+    <script  src="{% static 'pages/assets/js/jquery-3.6.0.min.js' %}"></script>
+    <!-- BOOTSTRAP JS-->
+    <script  src="{% static 'pages/assets/js/bootstrap.min.js' %}"></script>
+    <!-- APPEAR JS -->
+    <script  src="{% static 'pages/assets/js/appear.min.js' %}"></script>
+    <!-- MAGNIFICANT JS -->
+    <script  src="{% static 'pages/assets/js/jquery.magnific-popup.min.js' %}"></script>
+    <!-- SLICK JS-->
+    <script  src="{% static 'pages/assets/js/slick.min.js' %}"></script>
+    <!-- GSAP AND LOCOMOTIV JS-->
+    <script  src="{% static 'pages/assets/js/gsap.min.js' %}"></script>
+    <script  src="{% static 'pages/assets/js/ScrollSmoother.min.js' %}"></script>
+    <script  src="{% static 'pages/assets/js/ScrollTrigger.min.js' %}"></script>
+    <script  src="{% static 'pages/assets/js/smoother-script.js' %}"></script>
+    <!-- NICE SELECT JS-->
+    <script  src="{% static 'pages/assets/js/jquery.nice-select.min.js' %}"></script>
+    <!-- IMAGE LOADER JS-->
+    <script  src="{% static 'pages/assets/js/imagesloaded.pkgd.min.js' %}"></script>
+    <!-- ISOTOPE JS-->
+    <script  src="{% static 'pages/assets/js/isotope.pkgd.min.js' %}"></script>
+    <!--  WOW ANIMATION JS-->
+    <script  src="{% static 'pages/assets/js/wow.min.js' %}"></script>
+    <!-- SCRIPT JS-->
+    <script  src="{% static 'pages/assets/js/script.js' %}"></script>
 </body>
+
 </html>

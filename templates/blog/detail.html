@@ -13,30 +13,30 @@
     <!-- PAGE TITLE -->
     <title>{{ post.title }} - Syera Al-Faridzi</title>
     <!-- FAVICON ICON -->
-    <link rel="shortcut icon" href="{% static 'envato/assets/images/favicon.png' %}" type="image/x-icon"/>
+    <link rel="shortcut icon" href="{% static 'pages/assets/images/favicon.png' %}" type="image/x-icon"/>
     <!-- ALL GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
           rel="stylesheet">
     <!-- BOOTSTRAP CSS -->
-    <link rel="stylesheet" href="{% static 'envato/assets/css/bootstrap.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'pages/assets/css/bootstrap.min.css' %}"/>
     <!-- FONT AWESOME CSS -->
-    <link rel="stylesheet" href="{% static 'envato/assets/fonts/remixicon.css' %}"/>
+    <link rel="stylesheet" href="{% static 'pages/assets/fonts/remixicon.css' %}"/>
     <!-- MAGNIFIC CSS -->
-    <link rel="stylesheet" href="{% static 'envato/assets/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'pages/assets/css/magnific-popup.css' %}">
     <!-- NICE SELECT CSS -->
-    <link rel="stylesheet" href="{% static 'envato/assets/css/nice-select.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'pages/assets/css/nice-select.min.css' %}"/>
     <!-- ANIMATE CSS -->
-    <link rel="stylesheet" href="{% static 'envato/assets/css/animate.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'pages/assets/css/animate.min.css' %}"/>
     <!-- SLICK CSS -->
-    <link rel="stylesheet" href="{% static 'envato/assets/css/slick.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'pages/assets/css/slick.min.css' %}"/>
     <!-- SPACING CSS -->
-    <link rel="stylesheet" href="{% static 'envato/assets/css/spacing.css' %}"/>
+    <link rel="stylesheet" href="{% static 'pages/assets/css/spacing.css' %}"/>
     <!-- MAIN STYLE CSS -->
-    <link rel="stylesheet" href="{% static 'envato/assets/css/style.css' %}"/>
+    <link rel="stylesheet" href="{% static 'pages/assets/css/style.css' %}"/>
     <!-- RESPONSIVE CSS -->
-    <link rel="stylesheet" href="{% static 'envato/assets/css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'pages/assets/css/responsive.css' %}">
 </head>
 
 <body>
@@ -67,59 +67,7 @@
 </div>
 <!-- / END MAGIC CURSOR AND BALL AREA-->
 <!-- START MENU DESIGN AREA -->
-<header class="main-header">
-    <div class="header-upper">
-        <div class="container">
-            <div class="header-inner d-flex align-items-center">
-                <!-- START LOGO DESIGN AREA -->
-                <div class="logo-outer">
-                    <div class="logo">
-                        <a href="index.html"><img src="assets/images/logos/logo.png" alt="Logo" title="Logo"/></a>
-                    </div>
-                </div>
-                <!-- / END LOGO DESIGN AREA -->
-                <!-- START NAV DESIGN AREA -->
-                <div class="nav-outer clearfix mx-auto">
-                    <!-- Main Menu -->
-                    <nav class="main-menu navbar-expand-lg">
-                        <div class="navbar-header">
-                            <div class="mobile-logo">
-                                <a href="index.html">
-                                    <img src="assets/images/logos/logo.png" alt="Logo" title="Logo"/>
-                                </a>
-                            </div>
-                            <!-- Toggle Button -->
-                            <button type="button" class="navbar-toggle" data-bs-toggle="collapse"
-                                    data-bs-target=".navbar-collapse">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                        </div>
-                        <div class="navbar-collapse collapse">
-                            <ul class="navigation clearfix">
-                                <li><a class="nav-link-click" href="/">Home</a></li>
-                                <li><a class="nav-link-click" href="/about/">about</a></li>
-                                <li><a class="nav-link-click" href="/projects/">Projects</a></li>
-                                <li><a class="nav-link-click" href="/blog/">blog</a></li>
-                                <li><a class="nav-link-click" href="/contact/">Contact</a></li>
-                            </ul>
-                        </div>
-                    </nav>
-                    <!-- / END NAV DESIGN AREA -->
-                </div>
-                <div class="about-social text-center">
-                    <ul>
-                        <li><a href=""><i class="ri-facebook-circle-fill"></i></a></li>
-                        <li><a href=""><i class="ri-twitter-x-line"></i></a></li>
-                        <li><a href=""><i class="ri-linkedin-fill"></i></a></li>
-                        <li><a href=""><i class="ri-github-line"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
+
 <!-- / END MENU DESIGN AREA -->
 <!-- START MENU DESIGN AREA -->
 <div id="smooth-wrapper">
@@ -155,7 +103,8 @@
                                     <p>{{ post.description }}</p>
                                 </div>
                                 <div class="blog-detail-back">
-                                    <a href="{% url 'blog' %}" class="theme-btn">Back to Blog <i class="ri-arrow-left-line"></i></a>
+                                    <a href="{% url 'blog' %}" class="theme-btn">Back to Blog <i
+                                            class="ri-arrow-left-line"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -174,30 +123,30 @@
     </div>
     <!-- / END SCROOL UP DESIGN AREA -->
     <!-- JQUERY JS -->
-    <script src="{% static 'envato/assets/js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'pages/assets/js/jquery-3.6.0.min.js' %}"></script>
     <!-- BOOTSTRAP JS-->
-    <script src="{% static 'envato/assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'pages/assets/js/bootstrap.min.js' %}"></script>
     <!-- APPEAR JS -->
-    <script src="{% static 'envato/assets/js/appear.min.js' %}"></script>
+    <script src="{% static 'pages/assets/js/appear.min.js' %}"></script>
     <!-- MAGNIFICANT JS -->
-    <script src="{% static 'envato/assets/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'pages/assets/js/jquery.magnific-popup.min.js' %}"></script>
     <!-- SLICK JS-->
-    <script src="{% static 'envato/assets/js/slick.min.js' %}"></script>
+    <script src="{% static 'pages/assets/js/slick.min.js' %}"></script>
     <!-- GSAP AND LOCOMOTIV JS-->
-    <script src="{% static 'envato/assets/js/gsap.min.js' %}"></script>
-    <script src="{% static 'envato/assets/js/ScrollSmoother.min.js' %}"></script>
-    <script src="{% static 'envato/assets/js/ScrollTrigger.min.js' %}"></script>
-    <script src="{% static 'envato/assets/js/smoother-script.js' %}"></script>
+    <script src="{% static 'pages/assets/js/gsap.min.js' %}"></script>
+    <script src="{% static 'pages/assets/js/ScrollSmoother.min.js' %}"></script>
+    <script src="{% static 'pages/assets/js/ScrollTrigger.min.js' %}"></script>
+    <script src="{% static 'pages/assets/js/smoother-script.js' %}"></script>
     <!-- NICE SELECT JS-->
-    <script src="{% static 'envato/assets/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'pages/assets/js/jquery.nice-select.min.js' %}"></script>
     <!-- IMAGE LOADER JS-->
-    <script src="{% static 'envato/assets/js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'pages/assets/js/imagesloaded.pkgd.min.js' %}"></script>
     <!-- ISOTOPE JS-->
-    <script src="{% static 'envato/assets/js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'pages/assets/js/isotope.pkgd.min.js' %}"></script>
     <!--  WOW ANIMATION JS-->
-    <script src="{% static 'envato/assets/js/wow.min.js' %}"></script>
+    <script src="{% static 'pages/assets/js/wow.min.js' %}"></script>
     <!-- SCRIPT JS-->
-    <script src="{% static 'envato/assets/js/script.js' %}"></script>
+    <script src="{% static 'pages/assets/js/script.js' %}"></script>
 </div>
 </body>
 

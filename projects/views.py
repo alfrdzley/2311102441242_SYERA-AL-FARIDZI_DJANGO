@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Project
 
+
 def projects(request):
     projects_data = Project.objects.all()
     has_more = projects_data.count() > 3
@@ -13,6 +14,7 @@ def projects(request):
         'remaining_projects': projects_data[3:] if has_more else [],
     }
     return render(request, template_name, context)
+
 
 def project_detail(request, slug=None, project_id=None):
     if slug:

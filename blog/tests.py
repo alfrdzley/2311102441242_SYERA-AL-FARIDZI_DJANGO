@@ -23,7 +23,7 @@ class BlogViewsTest(TestCase):
 
     def test_blog_detail_view(self):
         # Test that the blog detail view returns a 200 response
-        response = self.client.get(reverse('blog_detail', args=[self.post.id]))
+        response = self.client.get(reverse('blog_detail', args=[self.post.slug]))
         self.assertEqual(response.status_code, 200)
         # Test that the post is in the context
         self.assertIn('post', response.context)
