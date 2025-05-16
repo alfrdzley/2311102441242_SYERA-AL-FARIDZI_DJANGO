@@ -1,9 +1,11 @@
-from pyexpat.errors import messages
+from django.contrib import messages
 
+from django.contrib.auth.models import User
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Post
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 
 
 @login_required
@@ -46,3 +48,23 @@ def blog_login(request):
         else:
             messages.error(request, 'Invalid credentials')
     return render(request, 'blog/login.html')
+
+
+def blog_signup(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        email = request.POST.get('email')
+        if User.objects.create_user(username=username, password=password, email=email):
+            messages.success(request, 'User created successfully')
+            return redirect('login')
+        else:
+            messages.error(request, 'User creation failed')
+    else:
+        messages.error(request, 'Invalid request method')
+    return render(request, 'blog/signup.html')
+
+
+def logout_view(request):
+    logout(request)
+    return redirect('login')

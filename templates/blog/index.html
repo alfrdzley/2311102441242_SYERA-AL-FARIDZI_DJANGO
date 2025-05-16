@@ -32,7 +32,56 @@
     <div id="ball"></div>
 </div>
 <!-- / END MAGIC CURSOR AND BALL AREA-->
-{% include 'homepage/header.html' %}
+<header class="main-header">
+    <div class="header-upper">
+        <div class="container">
+            <div class="header-inner d-flex align-items-center">
+                <!-- START LOGO DESIGN AREA -->
+                <div class="logo-outer">
+                    <div class="logo">
+                        <a href="/"><img src="{% static 'pages/assets/images/logos/logo.png' %}" alt="Logo"
+                                         title="Logo"/></a>
+                    </div>
+                </div>
+                <!-- / END LOGO DESIGN AREA -->
+                <!-- START NAV DESIGN AREA -->
+                <div class="nav-outer clearfix mx-auto">
+                    <!-- Main Menu -->
+                    <nav class="main-menu navbar-expand-lg">
+                        <div class="navbar-header">
+                            <div class="mobile-logo">
+                                <a href="/">
+                                    <img src="{% static 'pages/assets/images/logos/logo.png' %}" alt="Logo"
+                                         title="Logo"/>
+                                </a>
+                            </div>
+                            <!-- Toggle Button -->
+                            <button type="button" class="navbar-toggle" data-bs-toggle="collapse"
+                                    data-bs-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="navbar-collapse collapse">
+                            <ul class="navigation clearfix">
+                                <li><a class="nav-link-click" href="/">Home</a></li>
+                                <li><a class="nav-link-click" href="/about/">about</a></li>
+                                <li><a class="nav-link-click" href="/blog/">blog</a></li>
+                                <li><a class="nav-link-click" href="/contact/">Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                <div class="about-social text-center">
+                    <ul>
+                        <li><a href="{% url 'login' %}"><i class="ri-account-circle-line"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 <!-- START MENU DESIGN AREA -->
 <div id="smooth-wrapper">
     <div id="smooth-content">
@@ -73,9 +122,11 @@
                                             <div class="blog-post-caption">
                                                 <h3>POST ON {{ post.created_at }}</h3>
                                                 <h2><a class="link-decoration"
-                                                       href="{% url 'blog_detail' post.slug %}">{{ post.title }}</a></h2>
-                                                <a class="theme-btn" href="{% url 'blog_detail' post.slug %}">Read more <i
-                                                        class="ri-arrow-right-line"></i></a>
+                                                       href="{% url 'blog_detail' post.slug %}">{{ post.title }}</a>
+                                                </h2>
+                                                <h3>{{ post.subtitle }}</h3>
+                                                <a class="theme-btn" href="{% url 'blog_detail' post.slug %}">Read more
+                                                    <i class="ri-arrow-right-line"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -86,7 +137,6 @@
                 </div>
             </div>
             <!-- / END VLOG DESIGN AREA -->
-
             {% include 'homepage/footer.html' %}
         </main>
     </div>
