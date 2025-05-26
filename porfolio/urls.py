@@ -27,6 +27,7 @@ urlpatterns = [
     path('projects/', include('projects.urls')),
     path('contact/', include('contact.urls')),
     path('blog/', include('blog.urls')),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
 
 if settings.DEBUG:
