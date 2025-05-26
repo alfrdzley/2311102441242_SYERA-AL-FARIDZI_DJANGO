@@ -680,7 +680,7 @@
                     <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="javascript:;"><i
                             class="material-icons-outlined">cloud_download</i>Downloads</a>
                     <hr class="dropdown-divider">
-                    <a class="dropdown-item d-flex align-items-center gap-2 py-2" href=""><i
+                    <a class="dropdown-item d-flex align-items-center gap-2 py-2" href="{% url 'logout' %}"><i
                             class="material-icons-outlined">power_settings_new</i>Logout</a>
                 </div>
             </li>
@@ -707,62 +707,7 @@
     <div class="sidebar-nav">
         <!--navigation-->
         <ul class="metismenu" id="sidenav">
-            <li>
-                <a href="javascript:;" class="has-arrow">
-                    <div class="parent-icon"><i class="material-icons-outlined">home</i>
-                    </div>
-                    <div class="menu-title">Dashboard</div>
-                </a>
-                <ul>
-                    <li><a href="index.html"><i class="material-icons-outlined">arrow_right</i>Analysis</a>
-                    </li>
-                    <li><a href="index2.html"><i class="material-icons-outlined">arrow_right</i>eCommerce</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a href="javascript:;" class="has-arrow">
-                    <div class="parent-icon"><i class="material-icons-outlined">widgets</i>
-                    </div>
-                    <div class="menu-title">Widgets</div>
-                </a>
-                <ul>
-                    <li><a href="widgets-data.html"><i class="material-icons-outlined">arrow_right</i>Data</a>
-                    </li>
-                    <li><a href="widgets-static.html"><i class="material-icons-outlined">arrow_right</i>Static</a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <a class="has-arrow" href="javascript:;">
-                    <div class="parent-icon"><i class="material-icons-outlined">apps</i>
-                    </div>
-                    <div class="menu-title">Apps</div>
-                </a>
-                <ul>
-                    <li><a href="app-emailbox.html"><i class="material-icons-outlined">arrow_right</i>Email Box</a>
-                    </li>
-                    <li><a href="app-emailread.html"><i class="material-icons-outlined">arrow_right</i>Email Read</a>
-                    </li>
-                    <li><a href="app-chat-box.html"><i class="material-icons-outlined">arrow_right</i>Chat</a>
-                    </li>
-                    <li><a href="app-fullcalender.html"><i class="material-icons-outlined">arrow_right</i>Calendar</a>
-                    </li>
-                    <li><a href="app-to-do.html"><i class="material-icons-outlined">arrow_right</i>To do</a>
-                    </li>
-                    <li><a href="app-invoice.html"><i class="material-icons-outlined">arrow_right</i>Invoice</a>
-                    </li>
-                </ul>
-            </li>
             <li class="menu-label">UI Elements</li>
-            <li>
-                <a href="cards.html">
-                    <div class="parent-icon"><i class="material-icons-outlined">inventory_2</i>
-                    </div>
-                    <div class="menu-title">Cards</div>
-                </a>
-            </li>
-
             <li>
                 <a href="javascript:;" class="has-arrow">
                     <div class="parent-icon"><i class="material-icons-outlined">shopping_bag</i>
@@ -1116,7 +1061,8 @@
                                          width="60" height="60" alt="user">
                                     <div class="">
                                         <p class="mb-0 fw-semibold">Welcome back</p>
-                                        <h4 class="fw-semibold mb-0 fs-4 mb-0">Jhon Anderson!</h4>
+
+                                        <h4 class="fw-semibold mb-0 fs-4 mb-0">{{ user.username }}</h4>
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center gap-5">

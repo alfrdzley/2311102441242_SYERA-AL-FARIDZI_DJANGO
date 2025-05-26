@@ -100,7 +100,7 @@
                                     </div>
                                 </div>
                                 <div class="blog-detail-text">
-                                    <p>{{ post.description }}</p>
+                                    <p>{{ post.description | safe }}</p>
                                 </div>
                                 <div class="blog-detail-back">
                                     <a href="{% url 'blog' %}" class="theme-btn">Back to Blog <i
@@ -146,8 +146,11 @@
     <script src="{% static 'pages/assets/js/isotope.pkgd.min.js' %}"></script>
     <!--  WOW ANIMATION JS-->
     <script src="{% static 'pages/assets/js/wow.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'ckeditor/ckeditor-init.js' %}"></script>
+    <script type="text/javascript" src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
     <!-- SCRIPT JS-->
     <script src="{% static 'pages/assets/js/script.js' %}"></script>
+
 </div>
 </body>
 
