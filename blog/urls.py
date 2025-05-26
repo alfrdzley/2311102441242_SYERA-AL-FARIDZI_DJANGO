@@ -7,4 +7,5 @@ urlpatterns = [
     path('detail/<slug:slug>/', blog_detail, name='blog_detail'),
     path('login/', blog_login, name='login'),
     path('signup/', blog_signup, name='signup'),
+    path('logout/', blog_login, name='logout'),
 ]
